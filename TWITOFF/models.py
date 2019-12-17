@@ -1,11 +1,11 @@
-from flask_sqlalchemy import flask_sqlalchemy
+from flask_sqlalchemy import SQLAlchemy
 
-DB = flask_sqlalchemy()
+DB = SQLAlchemy()
 
 class User(DB.Model):
     """Twitter users that we analyze"""
     id = DB.Column(DB.BigInteger, primary_key=True)
-    name = DB.Column(DB.String(15),, nullable=False)
+    name = DB.Column(DB.String(15), nullable=False)
 
 class Tweet(DB.Model):
     """Tweets we pull"""
