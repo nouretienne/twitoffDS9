@@ -29,4 +29,9 @@ def create_app():
         DB.create_all()
         return render_template('base.html', title = 'Reset', users=[])
     
+    @app.route('/user', methods=['POST'])
+    @app.route('/user/<name>', methods=['GET'])
+    def user(name=None, message=''):
+        pass
+
     return app
